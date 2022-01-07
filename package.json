@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
-    "prebuild": "process.env.NODE_ENV='production & npm run build:tailwindcss",
+    "prebuild": "NODE_ENV='production & npm run build:tailwindcss",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:tailwindcss": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/style.css --minify"
