@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Coin from "./page/Coin";
 import Coins from "./page/Coins";
@@ -7,6 +7,7 @@ import Exchange from "./page/Exchange";
 import Price from "./page/Price";
 
 const Router = () => {
+  const [mode, setMode] = useState(false);
   return (
     <BrowserRouter>
       <Routes>
