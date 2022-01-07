@@ -25,11 +25,16 @@ const Coins = () => {
         {isLoading
           ? "Loading..."
           : data?.slice(0, 10).map((coin) => (
-              <li key={coin.id}>
+              <li key={coin.id} className="">
                 <Link
                   to={`/${coin.id}`}
-                  className=" active:text-purple-500 select-none block px-10 py-3 mb-5 bg-stone-100 rounded-md shadow-sm hover:scale-105 transition-all ease-in duration-100 hover:text-red-500 cursor-pointer"
+                  className="flex items-center mb-5 bg-stone-100 rounded-md shadow-sm hover:scale-105 transition-all ease-in duration-100 hover:text-red-500 cursor-pointer active:text-purple-500 select-none px-10 py-3 "
                 >
+                  <img
+                    className=" w-10 h-10 mr-3 "
+                    src={`https://cryptoicon-api.vercel.app/api/icon/${coin.symbol.toLocaleLowerCase()}`}
+                    alt="logo"
+                  />
                   {coin.name + " →"}
                 </Link>
               </li>
